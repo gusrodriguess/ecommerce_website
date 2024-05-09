@@ -3,8 +3,9 @@ import './nav.css';
 import { MdLocalShipping } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiLogIn } from "react-icons/fi";
-import { CiLogout, CiUser} from "react-icons/ci";
+import { CiLogout, CiUser } from "react-icons/ci";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
@@ -62,7 +63,8 @@ const Nav = () => {
                                     <CiUser />
                                 </div>
                                 <div className='info'>
-                                    <h3> Olá, {user.name}</h3>
+                                    <h2> {user.name}</h2>
+                                    <p> {user.email}</p>
                                 </div>
                             </>
                             :
@@ -75,6 +77,18 @@ const Nav = () => {
                             </div>
                             </>
                         }
+                    </div>
+                    <div className='nav'>
+                        <ul>
+                            <li> <Link to='/' className='link'> Home </Link></li>
+                            <li> <Link to='/shop' className='link'> Shop </Link></li>
+                            <li> <Link to='/collection' className='link'> Collection </Link></li>
+                            <li> <Link to='/about' className='link'> About </Link></li>
+                            <li> <Link to='/contact' className='link'> Contact </Link></li>
+                        </ul>
+                    </div>
+                    <div className='offer'>
+                        <p> flat 10% over all iphone </p>
                     </div>
                 </div>
             </div>
