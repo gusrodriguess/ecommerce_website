@@ -88,13 +88,5 @@ const Homeproduct =
         cat: 'speaker',
         type: 'top',
     },
-    {
-        id: 12,
-        Name: 'product12',
-        price: '807',
-        image: 'image/p12.jpg',
-        cat: 'speaker',
-        type: 'top',
-    },
 ]
 export default Homeproduct
